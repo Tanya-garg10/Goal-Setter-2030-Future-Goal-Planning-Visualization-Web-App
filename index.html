@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goal Setter 2030</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Animated background particles -->
+  <div class="bg-particles" aria-hidden="true" id="particles"></div>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-tag">Your Future Starts Now</p>
+      <h1 class="hero-title">Goal Setter <span class="accent">2030</span></h1>
+      <p class="hero-subtitle">Define your ambitions. Visualize the path. Make it happen.</p>
+      <a href="#goal-form" class="btn-primary" id="start-btn">Set Your Goals &darr;</a>
+    </div>
+  </header>
+
+  <!-- Goal Input Section -->
+  <section class="section goal-section" id="goal-form">
+    <div class="container">
+      <h2 class="section-title">Define Your Goals</h2>
+      <p class="section-desc">Add up to 6 goals you want to achieve by 2030. Pick a category, set a target year, and describe your vision.</p>
+
+      <form id="goalForm" class="goal-form-grid" novalidate>
+        <div class="form-group">
+          <label for="goalTitle">Goal Title</label>
+          <input type="text" id="goalTitle" placeholder="e.g. Launch my startup" maxlength="60" required />
+        </div>
+        <div class="form-group">
+          <label for="goalCategory">Category</label>
+          <select id="goalCategory" required>
+            <option value="">Select a category</option>
+            <option value="career">💼 Career</option>
+            <option value="health">💪 Health &amp; Fitness</option>
+            <option value="finance">💰 Finance</option>
+            <option value="education">📚 Education</option>
+            <option value="personal">🌱 Personal Growth</option>
+            <option value="travel">✈️ Travel &amp; Adventure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="goalYear">Target Year</label>
+          <select id="goalYear" required>
+            <option value="">Select year</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+          </select>
+        </div>
+        <div class="form-group full-width">
+          <label for="goalDesc">Description <span class="optional">(optional)</span></label>
+          <textarea id="goalDesc" rows="3" placeholder="Describe what success looks like…" maxlength="200"></textarea>
+        </div>
+        <div class="form-actions full-width">
+          <button type="submit" class="btn-primary" id="addGoalBtn">
+            <span class="btn-icon">+</span> Add Goal
+          </button>
+          <span class="goal-counter" id="goalCounter">0 / 6 goals</span>
+        </div>
+      </form>
+
+      <!-- Goal Cards -->
+      <div class="goal-cards" id="goalCards"></div>
+
+      <!-- Generate Roadmap Button -->
+      <div class="generate-wrap" id="generateWrap" style="display:none;">
+        <button class="btn-accent" id="generateBtn">✨ Generate My Roadmap</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section class="section roadmap-section" id="roadmap" style="display:none;">
+    <div class="container">
+      <h2 class="section-title">Your Future Roadmap</h2>
+      <p class="section-desc">Here's your journey from today to 2030. Stay focused, stay driven.</p>
+      <div class="timeline" id="timeline" role="list" aria-label="Goal timeline"></div>
+      <div class="roadmap-actions">
+        <button class="btn-outline" id="resetBtn">↺ Start Over</button>
+        <button class="btn-primary" id="shareBtn">📋 Copy Summary</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer class="footer">
+    <p>&copy; 2026 Goal Setter 2030 &mdash; Dream it. Plan it. Do it.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
