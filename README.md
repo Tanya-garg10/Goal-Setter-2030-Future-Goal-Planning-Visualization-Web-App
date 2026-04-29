@@ -6,8 +6,6 @@ A sleek, interactive single-page web app that helps you define your future goals
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
----
-
 ## ✨ Features
 
 - **Goal Input Form** — Add up to 6 goals with a title, category, target year (2025–2030), and optional description
@@ -18,8 +16,6 @@ A sleek, interactive single-page web app that helps you define your future goals
 - **Fully Responsive** — Works on desktop, tablet, and mobile
 - **Accessible** — Keyboard navigable, respects `prefers-reduced-motion`, proper ARIA attributes
 - **Zero Dependencies** — Pure HTML, CSS, and vanilla JavaScript (only Google Fonts for typography)
-
----
 
 ## 🚀 Getting Started
 
@@ -35,8 +31,6 @@ npx http-server -p 3000
 
 Then visit [http://localhost:3000](http://localhost:3000).
 
----
-
 ## 📁 Project Structure
 
 ```
@@ -47,8 +41,6 @@ Then visit [http://localhost:3000](http://localhost:3000).
 └── LICENSE
 ```
 
----
-
 ## 🖼️ How It Works
 
 1. **Hero Section** — A full-screen intro with a call-to-action to start setting goals
@@ -56,20 +48,14 @@ Then visit [http://localhost:3000](http://localhost:3000).
 3. **Generate Roadmap** — Click "Generate My Roadmap" to see your goals on a visual timeline
 4. **Share or Reset** — Copy your goal summary to clipboard or start over
 
----
-
 ## 🛡️ Security
 
 - All user input is HTML-escaped to prevent XSS
 - No data is sent to any server — everything stays in your browser
 
----
-
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
 
 ## 🤝 Contributing
 
